@@ -1,28 +1,192 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <title>{{ page.title }}</title>
-        <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/assets/home.css'>
-    </head>
-    <body>
-        <div id='container'>
-            <header>
-                <a href='mailto:hey@dmxco.dev'>Contact</a>
-            </header>
-            <main>
-                <div>
-                    <svg width='360px' height='156px' viewBox='0 0 300 130' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-                        <g id='mdx' fill='#373A3F' fill-rule='nonzero'>
-                            <path d='M155.851104,130 L148.306997,130 C140.002724,130 132.397481,126.957974 126.529677,121.919995 L124.737068,130 L104.203331,130 L115.757622,77.9221458 C115.856035,77.478467 115.938344,77.0308804 116.004251,76.5808891 C116.352871,74.217608 116.411621,73.6022891 116.352573,71.7422048 C116.323348,70.8217816 116.078806,68.4125094 116.012004,67.9886699 C114.792279,60.235713 107.440226,54.2673912 98.564561,54.2673912 C88.8368769,54.2673912 80.9393776,61.4365917 80.9393776,70.2674837 C80.9393776,72.5156367 80.9167127,74.4090872 81.1382912,76.2712758 C81.1484308,76.3572461 81.1606578,76.4429158 81.174376,76.5282849 C81.5507314,78.8711255 89.794764,130 89.794764,130 L69.2610272,130 L61.6301379,69.1113937 C60.6036598,60.7608532 54.0171418,54.1877334 44.2724591,54.1877334 C35.1647773,54.1877334 28.8860238,60.4572519 26.9568295,67.6021042 C26.7227257,68.4645124 26.6511525,69.3632927 26.7453905,70.2524539 C26.7966846,70.8094572 26.855136,71.3598474 26.855136,71.3598474 L37.8887316,130 L17.3549948,130 L0.263329503,37.1902653 L0,35.6058269 L18.5708435,35.6058269 L21.3213395,38.9782068 L27.1924244,46.0079311 C33.0074436,39.5529453 41.3982011,35.497312 50.7211988,35.497312 C61.0608332,35.497312 70.2538063,40.4856928 76.0583878,48.2028788 C82.1462796,40.4856928 91.7874795,35.497312 102.631705,35.497312 C111.843764,35.497312 120.187701,39.0972426 126.222807,44.9119602 C131.613159,38.8844211 139.418508,35.0927106 148.09526,35.0927106 C157.376805,35.0927106 165.660799,39.4312041 171.058905,46.2039193 L176.684852,0 L198.690907,0 L240.577893,66.303532 L240.65394,66.4228684 L273.802442,11.2073993 L300,19.8002197 L251.352036,81.8428117 L298.977101,130 L270.362458,130 L240.670044,98.1831782 L211.920606,130 L170.772612,130 L177.628424,121.919995 C171.76062,126.957974 164.155377,130 155.851104,130 Z M189.636011,120.589259 L228.473087,82.5465056 L195.362458,43.8992543 L189.636011,120.589259 Z M170.398344,71.9216602 C170.398344,62.0954968 162.483548,54.1176947 152.73469,54.1176947 C142.986131,54.1176947 135.071335,62.0954968 135.071335,71.9216602 L135.071335,93.6916816 C135.071335,103.517845 142.986131,111.495647 152.73469,111.495647 C162.483548,111.495647 170.398344,103.517845 170.398344,93.6916816 L170.398344,71.9216602 Z' id='Shape'></path>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset='utf-8'>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                blockquote: '#FBF9F7',
+                blockquote_high: '#E3D1C1',
+              }
+            }
+          }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+
+    @layer utilities {
+        .content-auto {
+            content-visibility: auto;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="bg-sky-100 pb-4">
+        <div class="container mx-auto max-w-screen-md">
+            <header class="flex items-center justify-between py-6">
+                <div class="flex items-center text-slate-800">
+                    <svg height="36px" viewBox="0 0 300 130" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="mdx" fill="currentColor" fill-rule="nonzero">
+                            <path
+                                d="M155.851104,130 L148.306997,130 C140.002724,130 132.397481,126.957974 126.529677,121.919995 L124.737068,130 L104.203331,130 L115.757622,77.9221458 C115.856035,77.478467 115.938344,77.0308804 116.004251,76.5808891 C116.352871,74.217608 116.411621,73.6022891 116.352573,71.7422048 C116.323348,70.8217816 116.078806,68.4125094 116.012004,67.9886699 C114.792279,60.235713 107.440226,54.2673912 98.564561,54.2673912 C88.8368769,54.2673912 80.9393776,61.4365917 80.9393776,70.2674837 C80.9393776,72.5156367 80.9167127,74.4090872 81.1382912,76.2712758 C81.1484308,76.3572461 81.1606578,76.4429158 81.174376,76.5282849 C81.5507314,78.8711255 89.794764,130 89.794764,130 L69.2610272,130 L61.6301379,69.1113937 C60.6036598,60.7608532 54.0171418,54.1877334 44.2724591,54.1877334 C35.1647773,54.1877334 28.8860238,60.4572519 26.9568295,67.6021042 C26.7227257,68.4645124 26.6511525,69.3632927 26.7453905,70.2524539 C26.7966846,70.8094572 26.855136,71.3598474 26.855136,71.3598474 L37.8887316,130 L17.3549948,130 L0.263329503,37.1902653 L0,35.6058269 L18.5708435,35.6058269 L21.3213395,38.9782068 L27.1924244,46.0079311 C33.0074436,39.5529453 41.3982011,35.497312 50.7211988,35.497312 C61.0608332,35.497312 70.2538063,40.4856928 76.0583878,48.2028788 C82.1462796,40.4856928 91.7874795,35.497312 102.631705,35.497312 C111.843764,35.497312 120.187701,39.0972426 126.222807,44.9119602 C131.613159,38.8844211 139.418508,35.0927106 148.09526,35.0927106 C157.376805,35.0927106 165.660799,39.4312041 171.058905,46.2039193 L176.684852,0 L198.690907,0 L240.577893,66.303532 L240.65394,66.4228684 L273.802442,11.2073993 L300,19.8002197 L251.352036,81.8428117 L298.977101,130 L270.362458,130 L240.670044,98.1831782 L211.920606,130 L170.772612,130 L177.628424,121.919995 C171.76062,126.957974 164.155377,130 155.851104,130 Z M189.636011,120.589259 L228.473087,82.5465056 L195.362458,43.8992543 L189.636011,120.589259 Z M170.398344,71.9216602 C170.398344,62.0954968 162.483548,54.1176947 152.73469,54.1176947 C142.986131,54.1176947 135.071335,62.0954968 135.071335,71.9216602 L135.071335,93.6916816 C135.071335,103.517845 142.986131,111.495647 152.73469,111.495647 C162.483548,111.495647 170.398344,103.517845 170.398344,93.6916816 L170.398344,71.9216602 Z"
+                                id="Shape"></path>
                         </g>
                     </svg>
-                    <p>Bringing fresh and exciting apps to life, driven by a passionate indie dev team.</p>
                 </div>
-            </main>
-            <footer id='footer'>
-                <p>© MDXCO 2023</p>
-            </footer>
+                <div>
+                    <a href="#contact" class="mt-4 py-3 px-5 w-full text-white font-semibold border rounded-xl bg-emerald-600 hover:bg-emerald-700 transition ease-in-out duration-200">Talk to us</a>
+                </div>
+            </header>
+
+            <h1 class="mb-8 text-5xl font-extrabold tracking-tight text-gray-900 text-center mt-12">Bringing fresh and
+                exciting apps to life, driven by a passionate <br /><span
+                    class="underline underline-offset-3 decoration-8 decoration-blue-600">indie dev team</span>.</h1>
         </div>
-    </body>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 66.03">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #fff
+                }
+
+                .cls-2 {
+                    fill: #E0F2FE;
+                    fill-rule: evenodd
+                }
+            </style>
+        </defs>
+        <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+                <path class="cls-1" d="M0 0H1440V65.99H0z" />
+                <path class="cls-2"
+                    d="M720 0H0v32.1h.05c141-2.33 274.39 8.75 400 18.68C499.64 58.65 610.38 66.16 720 66c109.62.17 220.36-7.34 320-15.21 125.56-9.93 259-21 400-18.68V0z" />
+            </g>
+        </g>
+    </svg>
+
+    <section class="text-gray-700 body-font">
+        <div class="container mx-auto max-w-screen-md flex py-14 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">We think,
+                    <br class="hidden lg:inline-block">we make it
+                </h1>
+                <p class="mb-8 leading-relaxed">Quick, timely, and attentive, because living is complex enough.
+                    Simple and straight to the point: we make solutions for daily basis issues. 
+                    A team driven by the passion of coding to deliver extraordinary solutions with strategic approach.</p>
+            </div>
+            <div class="w-1/2">
+                <img class="object-cover object-center rounded-3xl" alt="hero" src="./assets/banner.jpg">
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto max-w-screen-md pb-16">
+        <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-gray-900">Our apps</h2>
+        <div class="grid grid-cols-3 place-items-stretch">
+            <div class="border border-gray-100 p-4 rounded-tl-3xl rounded-bl-3xl">
+                <div class="w-36 h-36 mx-auto">
+                    <img class="object-cover object-center rounded text-center" alt="hero" src="./assets/address-app.png">
+                </div>
+
+                <h2 class="my-2 text-2 tracking-tight font-bold text-center text-gray-700">Address Search</h2>
+            </div>
+            <div class="border-y border-gray-100 p-4">
+                <div class="w-36 h-36 mx-auto">
+                    <img class="object-cover object-center rounded" alt="hero" src="./assets/tweet-app.png">
+                </div>
+
+                <h2 class="my-2 text-2 tracking-tight font-bold text-center text-gray-700">Coming soon</h2>
+            </div>
+            <div class="border border-gray-100 p-4 rounded-tr-3xl rounded-br-3xl">
+                <div class="w-36 h-36 mx-auto">
+                    <img class="object-cover object-center rounded" alt="hero" src="./assets/game-app.png">
+                </div>
+
+                <h2 class="my-2 text-2 tracking-tight font-bold text-center text-gray-700">Coming soon</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto max-w-screen-md">
+        <div class="w-3/4 mx-auto text-center bg-blockquote rounded-3xl px-5 py-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-blockquote_high mb-4"
+                viewBox="0 0 975.036 975.036">
+                <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+            </svg>
+            <p class="leading-relaxed text-lg text-gray-800">Your work is going to fill a large part of your life, and the only way to
+                be truly satisfied is to do what you believe is great work. And the only way to do great work is to love
+                what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart,
+                you'll know when you find it.</p>
+            <span class="inline-block h-1 w-10 rounded bg-blockquote_high my-4"></span>
+            <h2 class="text-gray-700 font-medium title-font tracking-wider text-sm">STEVE JOBS</h2>
+        </div>
+    </div>
+
+    <section id="contact" class="bg-white">
+        <div class="py-14 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contact Us</h2>
+            <p class="mb-8 font-light text-center text-gray-500 sm:text-xl">Want to send
+                feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+            <form action="mailto:hey@mdxco.dev" method="post" enctype="text/plain" class="space-y-8">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email" name="email"
+                        class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-100 focus:border-emerald-500 block w-full p-2.5 focus:outline-none"
+                        placeholder="your@mail.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                    <input type="text" id="subject" name="subject"
+                        class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-emerald-100 focus:border-emerald-500 focus:outline-none"
+                        placeholder="Let us know how we can help you" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                    <textarea id="message" rows="6" name="message"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-emerald-100 focus:border-emerald-500 focus:outline-none"
+                        placeholder="Leave a comment..."></textarea>
+                </div>
+                <button type="submit"
+                    class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-emerald-600 sm:w-fit hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-100">Send
+                    message</button>
+            </form>
+        </div>
+    </section>
+
+    <hr class="w-48 h-1 mx-auto bg-gray-100 border-0 rounded">
+
+    <footer
+        class="container mx-auto max-w-screen-md py-8 bg-white rounded-lg md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://mdxco.dev/"
+                class="hover:underline">MDX Co</a>. All Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 sm:mt-0">
+            <li>
+                <a href="https://github.com/mdxco" class="mr-4 hover:underline md:mr-6">Github</a>
+            </li>
+            <li>
+                <a href="https://www.mdxco.dev" class="hover:underline">About</a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
 </html>
