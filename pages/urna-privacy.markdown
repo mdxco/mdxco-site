@@ -1,6 +1,6 @@
 ---
 layout: privacy-policy
-title: Urna Eletrônica - Simulador - Privacy & Policy
+title: Urna Eletrônica - Simulador<br /> Privacy & Policy
 permalink: /urna/privacy
 ---
 
