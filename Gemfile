@@ -1,10 +1,12 @@
 source "https://rubygems.org"
 
 gem "minima", "~> 2.5"
-gem "github-pages", group: :jekyll_plugins
 
 gem 'jekyll'
 gem "jekyll-sass-converter", "~> 2.2.0"
+gem 'jekyll-postcss'
+
+gem "webrick", "~> 1.8"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
@@ -17,5 +19,3 @@ end
 
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
-gem "webrick", "~> 1.8"
